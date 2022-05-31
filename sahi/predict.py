@@ -532,7 +532,7 @@ def predict(
 
         durations_in_seconds["prediction"] += prediction_result.durations_in_seconds["prediction"]
         # Show prediction time
-        tqdm.write("Prediction time is: {:.2f} ms".format(prediction_result.durations_in_seconds["prediction"] * 1000))
+        #tqdm.write("Prediction time is: {:.2f} ms".format(prediction_result.durations_in_seconds["prediction"] * 1000))
 
         if dataset_json_path:
             if source_is_video is True:
