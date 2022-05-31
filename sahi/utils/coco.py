@@ -1810,10 +1810,12 @@ def get_imageid2annotationlist_mapping(
     """
     image_id_to_annotation_list: Dict = defaultdict(list)
     print("indexing coco dataset annotations...")
-    #edit here
-    for annotation in coco_dict["annotations"]:
-        image_id = annotation["image_id"]
-        image_id_to_annotation_list[image_id].append(annotation)
+    try:
+        for annotation in coco_dict["annotations"]:
+            image_id = annotation["image_id"]
+            image_id_to_annotation_list[image_id].append(annotation)
+    except:
+        pass
 
     return image_id_to_annotation_list
 
